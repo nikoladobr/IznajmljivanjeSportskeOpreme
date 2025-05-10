@@ -1,0 +1,17 @@
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\KontrolerAP.deps.json
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\KontrolerAP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\KontrolerAP.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\BrokerBP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\Domen.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\BrokerBP.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\bin\Debug\net6.0\Domen.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.csproj.AssemblyReference.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.GeneratedMSBuildEditorConfig.editorconfig
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.AssemblyInfoInputs.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.AssemblyInfo.cs
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.csproj.CoreCompileInputs.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.csproj.CopyComplete
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\refint\KontrolerAP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\KontrolerAP.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\KontrolerAP\obj\Debug\net6.0\ref\KontrolerAP.dll

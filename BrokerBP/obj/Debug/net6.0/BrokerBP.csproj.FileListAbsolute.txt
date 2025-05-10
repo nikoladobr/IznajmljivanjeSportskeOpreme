@@ -1,0 +1,15 @@
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\bin\Debug\net6.0\BrokerBP.deps.json
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\bin\Debug\net6.0\BrokerBP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\bin\Debug\net6.0\BrokerBP.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\bin\Debug\net6.0\Domen.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\bin\Debug\net6.0\Domen.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.csproj.AssemblyReference.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.GeneratedMSBuildEditorConfig.editorconfig
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.AssemblyInfoInputs.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.AssemblyInfo.cs
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.csproj.CoreCompileInputs.cache
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.csproj.CopyComplete
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\refint\BrokerBP.dll
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\BrokerBP.pdb
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\BrokerBP\obj\Debug\net6.0\ref\BrokerBP.dll

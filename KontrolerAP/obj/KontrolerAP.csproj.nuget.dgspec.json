@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\KontrolerAP\\KontrolerAP.csproj": {}
+  },
+  "projects": {
+    "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\BrokerBP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\BrokerBP.csproj",
+        "projectName": "BrokerBP",
+        "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\BrokerBP.csproj",
+        "packagesPath": "C:\\Users\\Nikola-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nikola-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj": {
+                "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj",
+        "projectName": "Domen",
+        "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj",
+        "packagesPath": "C:\\Users\\Nikola-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nikola-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\KontrolerAP\\KontrolerAP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\KontrolerAP\\KontrolerAP.csproj",
+        "projectName": "KontrolerAP",
+        "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\KontrolerAP\\KontrolerAP.csproj",
+        "packagesPath": "C:\\Users\\Nikola-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\KontrolerAP\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nikola-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\BrokerBP.csproj": {
+                "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\BrokerBP\\BrokerBP.csproj"
+              },
+              "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj": {
+                "projectPath": "D:\\Iznajmljivanje sportske opreme\\Iznajmljivanje sportske opreme\\Domen\\Domen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
