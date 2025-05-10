@@ -16,5 +16,13 @@ namespace Forme
         {
             InitializeComponent();
         }
+
+        private void kreirajOsobuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmOsoba frmOsoba = new();
+            frmOsoba.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -52,7 +52,6 @@ namespace Forme
             {
                 MessageBox.Show("Корисничко име и шифра нису исправни", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }

@@ -43,7 +43,6 @@ namespace BrokerBP
 
         public bool KreirajZaposleni(Zaposleni z)
         {
-
             using (SqlCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = "INSERT INTO Zaposleni (ime, prezime, korisnickoIme, sifra) VALUES (@ime, @prezime, @korisnickoIme, @sifra)";
@@ -91,6 +90,41 @@ namespace BrokerBP
                 }
             }
             return null;
+        }
+
+        public List<KategorijaOsobe> VratiListuSviKategorijaOsobe()
+        {
+            List<KategorijaOsobe> result = new();
+            using(SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "select * from KategorijaOsobe";
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        KategorijaOsobe k = new();
+                        k.IdKategorijaOsobe = (int)reader["idKategorijaOsobe"];
+                        k.Naziv = reader["naziv"].ToString();
+                        result.Add(k);
+                    }
+                    return result;
+                }
+            }           
+        }
+
+        public void KreirajOsobu(Osoba osoba)
+        {
+            using(SqlCommand cmd = conn.CreateCommand())
+            {                
+                    cmd.CommandText = "INSERT INTO Osoba (ime, prezime, email, idKategorijaOsobe) VALUES (@ime, @prezime, @email, @idKategorijaOsobe)";
+                   
+                    cmd.Parameters.AddWithValue("@ime", osoba.Ime);
+                    cmd.Parameters.AddWithValue("@prezime", osoba.Prezime);
+                    cmd.Parameters.AddWithValue("@email", osoba.Email);
+                    cmd.Parameters.AddWithValue("@idKategorijaOsobe", osoba.Kategorija.IdKategorijaOsobe);
+
+                    cmd.ExecuteNonQuery();                
+            }
         }
     }
 }

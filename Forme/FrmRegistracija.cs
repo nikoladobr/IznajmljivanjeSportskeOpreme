@@ -16,9 +16,7 @@ namespace Forme
     {
         public FrmRegistracija()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                   
         }
 
         private void FrmRegistracija_Load(object sender, EventArgs e)
@@ -30,8 +28,6 @@ namespace Forme
             {
                 clbTerminDezurstva.Items.Add(termin);
             }
-
-
         }
 
         private void btnRegistruj_Click(object sender, EventArgs e)
@@ -51,10 +47,10 @@ namespace Forme
             }
 
             Zaposleni novi = new Zaposleni();
-           novi.Sifra = txtSifra.Text;
-           novi.Ime = txtIme.Text;
-           novi.Prezime = txtPrezime.Text;
-           novi.KorisnickoIme = txtKorisnickoIme.Text;
+            novi.Sifra = txtSifra.Text;
+            novi.Ime = txtIme.Text;
+            novi.Prezime = txtPrezime.Text;
+            novi.KorisnickoIme = txtKorisnickoIme.Text;
 
             if (Kontroler.Instance.PostojiKorisnickoIme(novi.KorisnickoIme))
             {
