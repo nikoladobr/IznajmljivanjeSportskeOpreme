@@ -32,9 +32,7 @@
             this.primalacUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.osobaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajOsobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pretražiOsobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.promeniOsobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.obrišiOsobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upravljanjeOsobamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,9 +58,7 @@
             // 
             this.osobaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kreirajOsobuToolStripMenuItem,
-            this.pretražiOsobuToolStripMenuItem,
-            this.promeniOsobuToolStripMenuItem,
-            this.obrišiOsobuToolStripMenuItem});
+            this.upravljanjeOsobamaToolStripMenuItem});
             this.osobaToolStripMenuItem.Name = "osobaToolStripMenuItem";
             this.osobaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.osobaToolStripMenuItem.Text = "Osoba";
@@ -70,27 +66,16 @@
             // kreirajOsobuToolStripMenuItem
             // 
             this.kreirajOsobuToolStripMenuItem.Name = "kreirajOsobuToolStripMenuItem";
-            this.kreirajOsobuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kreirajOsobuToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.kreirajOsobuToolStripMenuItem.Text = "Kreiraj osobu";
             this.kreirajOsobuToolStripMenuItem.Click += new System.EventHandler(this.kreirajOsobuToolStripMenuItem_Click);
             // 
-            // pretražiOsobuToolStripMenuItem
+            // upravljanjeOsobamaToolStripMenuItem
             // 
-            this.pretražiOsobuToolStripMenuItem.Name = "pretražiOsobuToolStripMenuItem";
-            this.pretražiOsobuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pretražiOsobuToolStripMenuItem.Text = "Pretraži osobu";
-            // 
-            // promeniOsobuToolStripMenuItem
-            // 
-            this.promeniOsobuToolStripMenuItem.Name = "promeniOsobuToolStripMenuItem";
-            this.promeniOsobuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.promeniOsobuToolStripMenuItem.Text = "Promeni osobu";
-            // 
-            // obrišiOsobuToolStripMenuItem
-            // 
-            this.obrišiOsobuToolStripMenuItem.Name = "obrišiOsobuToolStripMenuItem";
-            this.obrišiOsobuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.obrišiOsobuToolStripMenuItem.Text = "Obriši osobu";
+            this.upravljanjeOsobamaToolStripMenuItem.Name = "upravljanjeOsobamaToolStripMenuItem";
+            this.upravljanjeOsobamaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.upravljanjeOsobamaToolStripMenuItem.Text = "Upravljanje osobama";
+            this.upravljanjeOsobamaToolStripMenuItem.Click += new System.EventHandler(this.upravljanjeOsobamaToolStripMenuItem_Click);
             // 
             // FrmGlavna
             // 
@@ -114,8 +99,6 @@
         private ToolStripMenuItem primalacUslugeToolStripMenuItem;
         private ToolStripMenuItem osobaToolStripMenuItem;
         private ToolStripMenuItem kreirajOsobuToolStripMenuItem;
-        private ToolStripMenuItem pretražiOsobuToolStripMenuItem;
-        private ToolStripMenuItem promeniOsobuToolStripMenuItem;
-        private ToolStripMenuItem obrišiOsobuToolStripMenuItem;
+        private ToolStripMenuItem upravljanjeOsobamaToolStripMenuItem;
     }
 }

@@ -126,5 +126,95 @@ namespace BrokerBP
                     cmd.ExecuteNonQuery();                
             }
         }
+
+        public List<Osoba> PretraziOsobe(Osoba osoba)
+        {
+            List<Osoba> rezultat = new();
+
+            // Osiguranje da polja ne budu null
+            osoba.Ime = osoba.Ime ?? "";
+            osoba.Prezime = osoba.Prezime ?? "";
+            osoba.Email = osoba.Email ?? "";
+            osoba.Kategorija ??= new KategorijaOsobe { IdKategorijaOsobe = -1 };
+
+            // Priprema parametara sa %
+            string ime = osoba.Ime == "" ? "" : $"%{osoba.Ime}%";
+            string prezime = osoba.Prezime == "" ? "" : $"%{osoba.Prezime}%";
+            string email = osoba.Email == "" ? "" : $"%{osoba.Email}%";
+            int katId = osoba.Kategorija.IdKategorijaOsobe;
+
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = @"SELECT * FROM Osoba 
+            WHERE (@ime = '' OR ime LIKE @ime) 
+              AND (@prezime = '' OR prezime LIKE @prezime) 
+              AND (@email = '' OR email LIKE @email) 
+              AND (@idKategorijaOsobe = -1 OR idKategorijaOsobe = @idKategorijaOsobe)";
+
+                cmd.Parameters.AddWithValue("@ime", ime);
+                cmd.Parameters.AddWithValue("@prezime", prezime);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@idKategorijaOsobe", katId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Osoba o = new Osoba
+                        {
+                            IdOsoba = reader["idOsoba"] != DBNull.Value ? (int)reader["idOsoba"] : 0,
+                            Ime = reader["ime"] != DBNull.Value ? (string)reader["ime"] : "",
+                            Prezime = reader["prezime"] != DBNull.Value ? (string)reader["prezime"] : "",
+                            Email = reader["email"] != DBNull.Value ? (string)reader["email"] : "",
+                            Kategorija = new KategorijaOsobe
+                            {
+                                IdKategorijaOsobe = reader["idKategorijaOsobe"] != DBNull.Value
+                                    ? (int)reader["idKategorijaOsobe"]
+                                    : -1
+                            }
+                        };
+
+                        rezultat.Add(o);
+                    }
+                }
+            }
+
+            return rezultat;
+        }
+
+        public List<Osoba> VratiListuSviOsobe()
+        {
+            List<Osoba> result = new();
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "select * from Osoba";
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Osoba o = new();
+                        o.IdOsoba = (int)reader["idOsoba"];
+                        o.Ime = reader["ime"].ToString();
+                        o.Prezime = reader["prezime"].ToString();
+                        o.Email = reader["email"].ToString();
+                       
+                        result.Add(o);
+                    }
+                    return result;
+                }
+            }
+        }
+
+        public bool ObrisiOsoba(Osoba o)
+        {
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "DELETE FROM Osoba WHERE idOsoba = @id";
+                cmd.Parameters.AddWithValue("@id", o.IdOsoba);
+                int result = cmd.ExecuteNonQuery();
+                return result > 0;
+            }
+        }
+
     }
 }

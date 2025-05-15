@@ -1,6 +1,6 @@
 ﻿namespace Forme
 {
-    partial class FrmOsoba
+    partial class FrmKreirajOsobu
     {
         /// <summary>
         /// Required designer variable.
@@ -32,20 +32,18 @@
             this.lblPrezime = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblKategorija = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbKategorija = new System.Windows.Forms.ComboBox();
-            this.btnPretrazi = new System.Windows.Forms.Button();
-            this.dgvOsobe = new System.Windows.Forms.DataGridView();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOsobe)).BeginInit();
+            this.btnSacuvaj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIme
             // 
+            this.lblIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIme.AutoSize = true;
-            this.lblIme.Location = new System.Drawing.Point(12, 132);
+            this.lblIme.Location = new System.Drawing.Point(255, 128);
             this.lblIme.Name = "lblIme";
             this.lblIme.Size = new System.Drawing.Size(30, 15);
             this.lblIme.TabIndex = 0;
@@ -53,8 +51,9 @@
             // 
             // lblPrezime
             // 
+            this.lblPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Location = new System.Drawing.Point(12, 174);
+            this.lblPrezime.Location = new System.Drawing.Point(255, 174);
             this.lblPrezime.Name = "lblPrezime";
             this.lblPrezime.Size = new System.Drawing.Size(52, 15);
             this.lblPrezime.TabIndex = 1;
@@ -62,8 +61,9 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(12, 216);
+            this.lblEmail.Location = new System.Drawing.Point(255, 220);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(39, 15);
             this.lblEmail.TabIndex = 2;
@@ -71,91 +71,75 @@
             // 
             // lblKategorija
             // 
+            this.lblKategorija.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblKategorija.AutoSize = true;
-            this.lblKategorija.Location = new System.Drawing.Point(12, 258);
+            this.lblKategorija.Location = new System.Drawing.Point(255, 266);
             this.lblKategorija.Name = "lblKategorija";
             this.lblKategorija.Size = new System.Drawing.Size(63, 15);
             this.lblKategorija.TabIndex = 3;
             this.lblKategorija.Text = "Kategorija:";
             // 
-            // txtEmail
+            // txtIme
             // 
-            this.txtEmail.Location = new System.Drawing.Point(88, 213);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(121, 23);
-            this.txtEmail.TabIndex = 4;
+            this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIme.Location = new System.Drawing.Point(343, 126);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(121, 23);
+            this.txtIme.TabIndex = 4;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(88, 171);
+            this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrezime.Location = new System.Drawing.Point(343, 171);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(121, 23);
             this.txtPrezime.TabIndex = 5;
             // 
-            // txtIme
+            // txtEmail
             // 
-            this.txtIme.Location = new System.Drawing.Point(88, 132);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(121, 23);
-            this.txtIme.TabIndex = 6;
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.Location = new System.Drawing.Point(343, 217);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(121, 23);
+            this.txtEmail.TabIndex = 6;
             // 
             // cbKategorija
             // 
+            this.cbKategorija.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbKategorija.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKategorija.FormattingEnabled = true;
-            this.cbKategorija.Location = new System.Drawing.Point(88, 255);
+            this.cbKategorija.Location = new System.Drawing.Point(343, 263);
             this.cbKategorija.Name = "cbKategorija";
             this.cbKategorija.Size = new System.Drawing.Size(121, 23);
             this.cbKategorija.TabIndex = 7;
             // 
-            // btnPretrazi
+            // btnSacuvaj
             // 
-            this.btnPretrazi.Location = new System.Drawing.Point(12, 301);
-            this.btnPretrazi.Name = "btnPretrazi";
-            this.btnPretrazi.Size = new System.Drawing.Size(82, 23);
-            this.btnPretrazi.TabIndex = 8;
-            this.btnPretrazi.Text = "Pretrazi";
-            this.btnPretrazi.UseVisualStyleBackColor = true;
-            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
-            // 
-            // dgvOsobe
-            // 
-            this.dgvOsobe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOsobe.Location = new System.Drawing.Point(280, 5);
-            this.dgvOsobe.Name = "dgvOsobe";
-            this.dgvOsobe.RowTemplate.Height = 25;
-            this.dgvOsobe.Size = new System.Drawing.Size(343, 433);
-            this.dgvOsobe.TabIndex = 9;
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(192, 301);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(82, 23);
-            this.btnObrisi.TabIndex = 10;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            this.btnSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSacuvaj.Location = new System.Drawing.Point(520, 196);
+            this.btnSacuvaj.Name = "btnSacuvaj";
+            this.btnSacuvaj.Size = new System.Drawing.Size(75, 23);
+            this.btnSacuvaj.TabIndex = 8;
+            this.btnSacuvaj.Text = "Sačuvaj";
+            this.btnSacuvaj.UseVisualStyleBackColor = true;
+            this.btnSacuvaj.Click += new System.EventHandler(this.btnSacuvaj_Click);
             // 
             // FrmOsoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 450);
-            this.Controls.Add(this.dgvOsobe);
-            this.Controls.Add(this.btnPretrazi);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSacuvaj);
             this.Controls.Add(this.cbKategorija);
-            this.Controls.Add(this.txtIme);
-            this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.txtIme);
             this.Controls.Add(this.lblKategorija);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.lblIme);
-            this.Controls.Add(this.btnObrisi);
             this.Name = "FrmOsoba";
-            this.Text = "Upravljanje osobama";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOsobe)).EndInit();
+            this.Text = "FrmOsoba";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,13 +151,10 @@
         private Label lblPrezime;
         private Label lblEmail;
         private Label lblKategorija;
-        private TextBox txtEmail;
-        private TextBox txtPrezime;
         private TextBox txtIme;
+        private TextBox txtPrezime;
+        private TextBox txtEmail;
         private ComboBox cbKategorija;
-        private Button btnPretrazi;
-        private DataGridView dgvOsobe;
-        private Button btnObrisi;
-
+        private Button btnSacuvaj;
     }
 }

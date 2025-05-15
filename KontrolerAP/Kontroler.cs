@@ -97,5 +97,44 @@ namespace KontrolerAP
                 broker.CloseConn();
             }
         }
+
+        public List<Osoba> PretraziOsobe(Osoba osoba)
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.PretraziOsobe(osoba);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public List<Osoba> VratiListuSviOsobe()
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.VratiListuSviOsobe();
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public bool ObrisiOsoba(Osoba o)
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.ObrisiOsoba(o);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
     }
 }

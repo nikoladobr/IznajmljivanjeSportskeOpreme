@@ -20,6 +20,14 @@ namespace Forme
         private void kreirajOsobuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+            FrmKreirajOsobu frmKreiraj = new();
+            frmKreiraj.ShowDialog();
+            this.Show();
+        }
+
+        private void upravljanjeOsobamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
             FrmOsoba frmOsoba = new();
             frmOsoba.ShowDialog();
             this.Show();

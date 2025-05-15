@@ -30,4 +30,5 @@ D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\bin\Debug
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\bin\Debug\net6.0-windows\BrokerBP.pdb
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.csproj.CopyComplete
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmGlavna.resources
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmKreirajOsobu.resources
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmOsoba.resources
