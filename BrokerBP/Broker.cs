@@ -1,5 +1,6 @@
 ﻿using Domen;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace BrokerBP
 {
@@ -45,7 +46,8 @@ namespace BrokerBP
         {
             using (SqlCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "INSERT INTO Zaposleni (ime, prezime, korisnickoIme, sifra) VALUES (@ime, @prezime, @korisnickoIme, @sifra)";
+                cmd.CommandText = "INSERT INTO Zaposleni (ime, prezime, korisnickoIme, sifra) " +
+                                  "VALUES (@ime, @prezime, @korisnickoIme, @sifra)";
                 cmd.Parameters.AddWithValue("@ime", z.Ime);
                 cmd.Parameters.AddWithValue("@prezime", z.Prezime);
                 cmd.Parameters.AddWithValue("@korisnickoIme", z.KorisnickoIme);
@@ -246,5 +248,118 @@ namespace BrokerBP
             }
         }
 
+        public List<Zaposleni> VratiListuSviZaposleni()
+        {
+            List<Zaposleni> result = new();
+            using(SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "select * from Zaposleni";
+                using(SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Zaposleni z = new();
+                        z.Ime = reader["ime"].ToString();
+                        z.Prezime = reader["prezime"].ToString();
+                        z.IdZaposleni = (int)reader["idZaposleni"];
+                        z.KorisnickoIme = reader["korisnickoIme"].ToString();
+                        result.Add(z);
+                    }
+                    return result;
+                }
+            }
+        }
+
+        public List<Zaposleni> PretraziZaposlene(Zaposleni zaposleni, List<TerminDezurstva> izabraneSmene)
+        {
+            List<Zaposleni> rezultat = new List<Zaposleni>();
+
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText =
+                    "SELECT DISTINCT z.* " +
+                    "FROM Zaposleni z " +
+                    "LEFT JOIN Zaposleni_TerminDežurstva ztd ON z.idZaposleni = ztd.idZaposleni " +
+                    "LEFT JOIN TerminDežurstva td ON ztd.idTerminDezurstva = td.idTerminDezurstva " +
+                    "WHERE 1=1";
+
+                if (!string.IsNullOrWhiteSpace(zaposleni.Ime))
+                {
+                    cmd.CommandText += " AND z.ime LIKE @ime";
+                    cmd.Parameters.AddWithValue("@ime", "%" + zaposleni.Ime + "%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(zaposleni.Prezime))
+                {
+                    cmd.CommandText += " AND z.prezime LIKE @prezime";
+                    cmd.Parameters.AddWithValue("@prezime", "%" + zaposleni.Prezime + "%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(zaposleni.KorisnickoIme))
+                {
+                    cmd.CommandText += " AND z.korisnickoIme LIKE @korime";
+                    cmd.Parameters.AddWithValue("@korime", "%" + zaposleni.KorisnickoIme + "%");
+                }
+
+                if (izabraneSmene != null && izabraneSmene.Count > 0)
+                {
+                    cmd.CommandText += " AND td.idTerminDezurstva IN (";
+
+                    for (int i = 0; i < izabraneSmene.Count; i++)
+                    {
+                        string paramName = "@smena" + i;
+                        if (i > 0) cmd.CommandText += ", ";
+                        cmd.CommandText += paramName;
+                        cmd.Parameters.AddWithValue(paramName, izabraneSmene[i].IdTerminDezurstva);
+                    }
+
+                    cmd.CommandText += ")";
+                }
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Zaposleni z = new Zaposleni
+                        {
+                            IdZaposleni = (int)reader["idZaposleni"],
+                            Ime = reader["ime"].ToString(),
+                            Prezime = reader["prezime"].ToString(),
+                            KorisnickoIme = reader["korisnickoIme"].ToString(),
+                            Sifra = reader["sifra"].ToString()
+                        };
+
+                        rezultat.Add(z);
+                    }
+                }
+            }
+
+            return rezultat;
+        }
+
+        public int VratiIdZaposlenogPoKorisnickomImenu(string korisnickoIme)
+        {
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT idZaposleni FROM Zaposleni WHERE korisnickoIme = @korime";
+                cmd.Parameters.AddWithValue("@korime", korisnickoIme);
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        public void UbaciZaposleniTermin(ZaposleniTerminDezurstva ztd)
+        {
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "INSERT INTO Zaposleni_TerminDežurstva " +
+                                  "(idZaposleni, idTerminDezurstva, datumDezurstva) " +
+                                  "VALUES (@idZap, @idTermin, @datum)";
+                cmd.Parameters.AddWithValue("@idZap", ztd.IdZaposleni);
+                cmd.Parameters.AddWithValue("@idTermin", ztd.IdTerminDezurstva);
+                cmd.Parameters.AddWithValue("@datum", ztd.DatumDezurstva);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

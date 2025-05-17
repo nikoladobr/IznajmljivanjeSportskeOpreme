@@ -22,7 +22,7 @@ namespace Forme
         private void btnRegistracija_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmRegistracija frm = new();
+            FrmKreirajZaposlenog frm = new();
             frm.ShowDialog();
             this.Show();
         }
@@ -31,7 +31,7 @@ namespace Forme
         {
             if (string.IsNullOrWhiteSpace(txtKorisnickoIme.Text) || string.IsNullOrWhiteSpace(txtSifra.Text))
             {
-                MessageBox.Show("Morate uneti korisničko ime i šifru!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Попуните сва поља.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

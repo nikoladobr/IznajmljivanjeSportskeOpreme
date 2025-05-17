@@ -1,6 +1,6 @@
 ﻿namespace Forme
 {
-    partial class FrmRegistracija
+    partial class FrmKreirajZaposlenog
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.clbTerminDezurstva = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIme = new System.Windows.Forms.TextBox();
-            this.btnRegistruj = new System.Windows.Forms.Button();
+            this.btnKreiraj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPrezime
@@ -142,22 +142,22 @@
             this.txtIme.Size = new System.Drawing.Size(160, 23);
             this.txtIme.TabIndex = 10;
             // 
-            // btnRegistruj
+            // btnKreiraj
             // 
-            this.btnRegistruj.Location = new System.Drawing.Point(200, 358);
-            this.btnRegistruj.Name = "btnRegistruj";
-            this.btnRegistruj.Size = new System.Drawing.Size(112, 23);
-            this.btnRegistruj.TabIndex = 12;
-            this.btnRegistruj.Text = "Registruj se";
-            this.btnRegistruj.UseVisualStyleBackColor = true;
-            this.btnRegistruj.Click += new System.EventHandler(this.btnRegistruj_Click);
+            this.btnKreiraj.Location = new System.Drawing.Point(200, 358);
+            this.btnKreiraj.Name = "btnKreiraj";
+            this.btnKreiraj.Size = new System.Drawing.Size(112, 23);
+            this.btnKreiraj.TabIndex = 12;
+            this.btnKreiraj.Text = "Kreiraj zaposlenog";
+            this.btnKreiraj.UseVisualStyleBackColor = true;
+            this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_Click);
             // 
-            // FrmRegistracija
+            // FrmKreirajZaposlenog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 450);
-            this.Controls.Add(this.btnRegistruj);
+            this.Controls.Add(this.btnKreiraj);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.clbTerminDezurstva);
@@ -170,9 +170,9 @@
             this.Controls.Add(this.txtSifra);
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.txtPrezime);
-            this.Name = "FrmRegistracija";
+            this.Name = "FrmKreirajZaposlenog";
             this.Text = "FrmRegistracija";
-            this.Load += new System.EventHandler(this.FrmRegistracija_Load);
+            this.Load += new System.EventHandler(this.FrmKreirajZaposlenog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +192,6 @@
         private CheckedListBox clbTerminDezurstva;
         private Label label6;
         private TextBox txtIme;
-        private Button btnRegistruj;
+        private Button btnKreiraj;
     }
 }

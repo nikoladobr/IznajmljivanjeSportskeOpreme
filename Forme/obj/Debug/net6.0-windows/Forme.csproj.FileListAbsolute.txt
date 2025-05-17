@@ -1,6 +1,5 @@
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.csproj.AssemblyReference.cache
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmLogin.resources
-D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmRegistracija.resources
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.csproj.GenerateResource.cache
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.GeneratedMSBuildEditorConfig.editorconfig
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.AssemblyInfoInputs.cache
@@ -32,3 +31,5 @@ D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmGlavna.resources
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmKreirajOsobu.resources
 D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmOsoba.resources
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmZaposleni.resources
+D:\Iznajmljivanje sportske opreme\Iznajmljivanje sportske opreme\Forme\obj\Debug\net6.0-windows\Forme.FrmKreirajZaposlenog.resources

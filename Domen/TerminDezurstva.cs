@@ -8,6 +8,7 @@ namespace Domen
 {
     public class TerminDezurstva
     {
+        public int IdZaposleni { get; set; }
         public int IdTerminDezurstva { get; set; }
         public int Smena { get; set; }
 

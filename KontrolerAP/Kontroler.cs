@@ -150,5 +150,69 @@ namespace KontrolerAP
             }
         }
 
+        public List<Zaposleni> VratiListuSviZaposleni()
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.VratiListuSviZaposleni();            
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public List<Zaposleni> PretraziZaposlene(Zaposleni zaposleni, List<TerminDezurstva> izabraneSmene)
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.PretraziZaposlene(zaposleni, izabraneSmene);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public bool KreirajZaposlenog(Zaposleni z)
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.KreirajZaposleni(z);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public void UbaciZaposleniTermin(ZaposleniTerminDezurstva ztd)
+        {
+            try
+            {
+                broker.OpenConn();
+                broker.UbaciZaposleniTermin(ztd);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
+        public int VratiIdZaposlenogPoKorisnickomImenu(string korisnickoIme)
+        {
+            try
+            {
+                broker.OpenConn();
+                return broker.VratiIdZaposlenogPoKorisnickomImenu(korisnickoIme);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
     }
 }

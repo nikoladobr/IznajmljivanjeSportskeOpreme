@@ -17,7 +17,7 @@ namespace Forme
             InitializeComponent();
         }
 
-        private void kreirajOsobuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void kreirajOsobuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmKreirajOsobu frmKreiraj = new();
@@ -25,11 +25,27 @@ namespace Forme
             this.Show();
         }
 
-        private void upravljanjeOsobamaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void upravljanjeOsobamaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmOsoba frmOsoba = new();
             frmOsoba.ShowDialog();
+            this.Show();
+        }
+
+        private void upravljanjeZaposlenimaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmZaposleni frmZaposleni = new();
+            frmZaposleni.ShowDialog();
+            this.Show();
+        }
+
+        private void kreirajZaposlenogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmKreirajZaposlenog frmKreirajZaposleni = new();
+            frmKreirajZaposleni.ShowDialog();
             this.Show();
         }
     }

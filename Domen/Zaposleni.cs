@@ -8,6 +8,7 @@
         public string KorisnickoIme { get; set; }
         public string Sifra { get; set; }
 
+
         public override string ToString() => $"{Ime} {Prezime}";
     }
 }
