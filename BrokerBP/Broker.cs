@@ -187,23 +187,36 @@ namespace BrokerBP
             List<Osoba> result = new();
             using (SqlCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "select * from Osoba";
+                cmd.CommandText = @"
+            SELECT o.idOsoba, o.ime, o.prezime, o.email,
+                   ko.idKategorijaOsobe, ko.naziv AS nazivKategorije
+            FROM Osoba o
+            INNER JOIN KategorijaOsobe ko ON o.idKategorijaOsobe = ko.idKategorijaOsobe";
+
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Osoba o = new();
-                        o.IdOsoba = (int)reader["idOsoba"];
-                        o.Ime = reader["ime"].ToString();
-                        o.Prezime = reader["prezime"].ToString();
-                        o.Email = reader["email"].ToString();
-                       
+                        Osoba o = new Osoba
+                        {
+                            IdOsoba = (int)reader["idOsoba"],
+                            Ime = reader["ime"].ToString(),
+                            Prezime = reader["prezime"].ToString(),
+                            Email = reader["email"].ToString(),
+                            Kategorija = new KategorijaOsobe
+                            {
+                                IdKategorijaOsobe = (int)reader["idKategorijaOsobe"],
+                                Naziv = reader["nazivKategorije"].ToString()
+                            }
+                        };
+
                         result.Add(o);
                     }
                     return result;
                 }
             }
         }
+
 
         public bool ObrisiOsoba(Osoba o)
         {
@@ -213,6 +226,23 @@ namespace BrokerBP
                 cmd.Parameters.AddWithValue("@id", o.IdOsoba);
                 int result = cmd.ExecuteNonQuery();
                 return result > 0;
+            }
+        }
+
+        public void PromeniOsoba(Osoba osoba)
+        {
+            using (SqlCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = @"UPDATE Osoba 
+                            SET ime = @ime, prezime = @prezime, email = @email, idKategorijaOsobe = @idKat 
+                            WHERE idOsoba = @id";
+                cmd.Parameters.AddWithValue("@ime", osoba.Ime);
+                cmd.Parameters.AddWithValue("@prezime", osoba.Prezime);
+                cmd.Parameters.AddWithValue("@email", osoba.Email);
+                cmd.Parameters.AddWithValue("@idKat", osoba.Kategorija.IdKategorijaOsobe);
+                cmd.Parameters.AddWithValue("@id", osoba.IdOsoba);
+
+                cmd.ExecuteNonQuery();
             }
         }
 

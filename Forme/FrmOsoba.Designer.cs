@@ -39,6 +39,7 @@
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.dgvOsobe = new System.Windows.Forms.DataGridView();
             this.btnObrisi = new System.Windows.Forms.Button();
+            this.btnPromeni = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOsobe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,10 +127,11 @@
             this.dgvOsobe.RowTemplate.Height = 25;
             this.dgvOsobe.Size = new System.Drawing.Size(343, 433);
             this.dgvOsobe.TabIndex = 9;
+            this.dgvOsobe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOsobe_CellClick);
             // 
             // btnObrisi
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(192, 301);
+            this.btnObrisi.Location = new System.Drawing.Point(188, 301);
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(82, 23);
             this.btnObrisi.TabIndex = 10;
@@ -137,11 +139,22 @@
             this.btnObrisi.UseVisualStyleBackColor = true;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
+            // btnPromeni
+            // 
+            this.btnPromeni.Location = new System.Drawing.Point(100, 301);
+            this.btnPromeni.Name = "btnPromeni";
+            this.btnPromeni.Size = new System.Drawing.Size(82, 23);
+            this.btnPromeni.TabIndex = 11;
+            this.btnPromeni.Text = "Promeni";
+            this.btnPromeni.UseVisualStyleBackColor = true;
+            this.btnPromeni.Click += new System.EventHandler(this.btnPromeni_Click);
+            // 
             // FrmOsoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 450);
+            this.Controls.Add(this.btnPromeni);
             this.Controls.Add(this.dgvOsobe);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.cbKategorija);
@@ -174,6 +187,6 @@
         private Button btnPretrazi;
         private DataGridView dgvOsobe;
         private Button btnObrisi;
-
+        private Button btnPromeni;
     }
 }

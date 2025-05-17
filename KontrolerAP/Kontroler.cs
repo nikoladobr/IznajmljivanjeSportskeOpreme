@@ -136,5 +136,19 @@ namespace KontrolerAP
                 broker.CloseConn();
             }
         }
+
+        public void PromeniOsoba(Osoba osoba)
+        {
+            try
+            {
+                broker.OpenConn();
+                broker.PromeniOsoba(osoba);
+            }
+            finally
+            {
+                broker.CloseConn();
+            }
+        }
+
     }
 }
